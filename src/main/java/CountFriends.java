@@ -6,7 +6,7 @@ public class CountFriends {
     static Scanner sc = new Scanner(System.in);
 
     //Функция ввода количества человек
-    public static int inputCountFriends(double countMoney) {
+    public static int inputCountFriends() {
         do {
             System.out.println("На скольких человек необходимо разделить счёт?");
             try {
@@ -26,9 +26,7 @@ public class CountFriends {
                     System.out.println("Нечего делить в счете оплачиваемым одним человеком.\n Введите еще раз!)");
                     break;
                 default:
-                    if (countFriends > countMoney * 100)
-                        System.out.println("Счет слишком маленький для такой большой компании.\n Введите еще раз!)");
-                    else if (countFriends < 0)
+                     if (countFriends < 0)
                         System.out.println("Кхм... Попробуем еще раз!");
                     else return countFriends;
             }
